@@ -4,7 +4,6 @@ import model.StatusResponse;
 import model.Vote;
 import model.VoteDao;
 import spark.ModelAndView;
-import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
@@ -25,10 +24,8 @@ public class VoteController {
         post("/vote", (req, res) -> {
             res.type("application/json");
             String body = req.body();
-            System.out.println(body);
             Vote vote = new Gson().fromJson(body, Vote.class);
 
-            System.out.println(vote);
             VoteDao.add(vote);
             return new Gson()
                     .toJson(new StandardResponse(StatusResponse.SUCCESS));
@@ -39,8 +36,9 @@ public class VoteController {
             return renderVotes();
         });
 
+        // if the route didn't return anything
         after((req, res) -> {
-            if (res.body() == null) { // if the route didn't return anything
+            if (res.body() == null) {
                 res.body(renderIndex());
             }
         });
