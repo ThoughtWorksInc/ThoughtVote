@@ -8,8 +8,8 @@ $(document).ready(function() {
         $.ajax({
             type: 'GET',
             url: '/refreshVotes',
-            success: function (votesHtml) {
-                $('#votes').html(votesHtml);
+            success: function (count) {
+                $('#answer-a-counter').text(count);
             },
             complete: function (data) {
                 // Schedule the next

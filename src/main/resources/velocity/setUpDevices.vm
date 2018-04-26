@@ -1,0 +1,22 @@
+<header>
+    <h1>Votes</h1>
+</header>
+
+<section id="main">
+    <ul id="vote-list">
+        #foreach($vote in $votes)
+            <li>
+                <div class="view">
+                    <label>$vote.topic</label>
+                    <label>$vote.payload</label>
+                </div>
+            </li>
+        #end
+    </ul>
+</section>
+
+<footer>
+    <span id="vote-count">
+        <strong>$voteCount</strong> votes in total
+    </span>
+</footer>

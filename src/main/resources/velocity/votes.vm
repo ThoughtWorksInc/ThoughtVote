@@ -46,4 +46,5 @@
     <span id="vote-count">
         <strong>$voteCount</strong> votes in total
     </span>
+    <button class="destroy" ic-delete-from="/votes">Clear all votes</button>
 </footer>

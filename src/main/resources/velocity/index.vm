@@ -17,7 +17,6 @@
     <div id="votes">
         #parse("/velocity/votes.vm")
     </div>
-    <button class="destroy" ic-delete-from="/votes">Clear all votes<button>
 </section>
 <script src="/js/vendor/jquery-3.3.1.js"></script>
 <script src="/js/vendor/intercooler-1.2.1.js"></script>
