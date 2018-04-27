@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 </head>
 <body>
-<section id="voteapp" ic-target="this">
-    <div id="votes">
-        #parse("/velocity/votes.vm")
-    </div>
+<section id="voteapp">
+        #if($page == 'votes')
+            <script src="/js/votes.js"></script>
+            <div ic-target="this">
+                #parse("/velocity/votes.vm")
+            </div>
+        #elseif($page == 'setup')
+            #parse("/velocity/setUpDevices.vm")
+        #end
 </section>
 <script src="/js/vendor/jquery-3.3.1.js"></script>
 <script src="/js/vendor/intercooler-1.2.1.js"></script>

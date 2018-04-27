@@ -1,22 +1,38 @@
+<script src="/js/setup.js"></script>
+
 <header>
-    <h1>Votes</h1>
+    <h1>Set Up
+        #if(!$setupComplete)
+            Started...
+        #end
+    </h1>
 </header>
 
 <section id="main">
-    <ul id="vote-list">
-        #foreach($vote in $votes)
+    <ul id="device-list">
+        #foreach($device in $devices)
             <li>
                 <div class="view">
-                    <label>$vote.topic</label>
-                    <label>$vote.payload</label>
+                    <label>Vote A topic: $device.voteA.topic | Vote A channel: $device.voteA.payload</label>
+                </div>
+                <div class="view">
+                    <label>Vote B topic: $device.voteB.topic | Vote B channel: $device.voteB.payload</label>
                 </div>
             </li>
         #end
+        #if($isSettingUpDevice)
+            <h3>Setting up new device...</h3>
+        #end
+
+        #if($setupComplete)
+            <h1>COMPLETE!</h1>
+        #end
     </ul>
+    <button id="endSetup">End Setup</button>
 </section>
 
 <footer>
-    <span id="vote-count">
-        <strong>$voteCount</strong> votes in total
+    <span id="device-count">
+        <strong>$deviceCount</strong> devices in total
     </span>
 </footer>

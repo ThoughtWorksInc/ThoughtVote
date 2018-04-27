@@ -1,5 +1,6 @@
 package model;
 
+import builders.VoteBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,7 @@ class VoteDaoTest {
     @Test
     void shouldAddVote() {
         Votes votes = new Votes();
-        Vote vote = new Vote("topic", new Status("rssi"), 1);
+        Vote vote = VoteBuilder.buildVote("BYRON_SX/0xA5");
         votes.add(vote);
 
         assertThat(votes.get(0), is(vote));
@@ -24,9 +25,9 @@ class VoteDaoTest {
     @Test
     void shouldKeepCountOfVotes() {
         Votes votes = new Votes();
-        Vote vote = new Vote("topic", new Status("rssi"), 1);
+        Vote vote = VoteBuilder.buildVote("BYRON_SX/0xA5");
         votes.add(vote);
-        Vote voteTwo = new Vote("topicTwo", new Status("rssi"), 1);
+        Vote voteTwo = VoteBuilder.buildVote("BYRON_SX/0xA5");
         votes.add(voteTwo);
 
         assertThat(votes.size(), is(2));

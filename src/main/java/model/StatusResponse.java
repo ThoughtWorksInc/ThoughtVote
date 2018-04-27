@@ -1,8 +1,10 @@
 package model;
 
 public enum StatusResponse {
-    SUCCESS ("Success"),
-    ERROR ("Error");
+    SUCCESS("Success"),
+    ERROR("Error"),
+    STILL_SETTING_UP("Still setting up..."),
+    DONE_SETTING_UP("Completed setup!");
 
     private String status;
 
