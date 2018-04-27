@@ -88,17 +88,4 @@ class CountTest {
         assertThat(count.getVoteACount(), is(0));
         assertThat(count.getVoteBCount(), is(2));
     }
-
-    @Test
-    void should() {
-        Vote vote = VoteBuilder.buildVote("topicTwo", 3);
-        votes.add(vote);
-
-        Vote voteTwo = VoteBuilder.buildVote("topicFour", 8);
-        votes.add(voteTwo);
-
-        assertThat(new Gson()
-                .toJson(new Count(votes, devices)), is(""));
-    }
-
 }
