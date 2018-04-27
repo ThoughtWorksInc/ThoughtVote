@@ -1,16 +1,14 @@
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import model.Device;
 import model.DeviceSetup;
+import model.Devices;
 import model.StandardResponse;
 import model.StatusResponse;
 import spark.ModelAndView;
 import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -41,15 +39,15 @@ public class SetupController {
 
         post("/devices", (req, res) -> {
             String body = req.body();
-            ArrayList<Device> devicesList = new Gson().fromJson(body, new TypeToken<List<Device>>() {
-            }.getType());
+            Devices devicesList = new Gson().fromJson(body, Devices.class);
+
             DeviceSetup.getInstance().setDevices(devicesList);
             return new Gson()
                     .toJson(new StandardResponse(StatusResponse.SUCCESS));
         });
 
         delete("/device/:id", (req, res) -> {
-            List<Device> devices = DeviceSetup.getInstance().getDevices();
+            Devices devices = DeviceSetup.getInstance().getDevices();
             Integer id = Integer.parseInt(req.params("id"));
             System.out.println("attempting to delete...." + id);
 

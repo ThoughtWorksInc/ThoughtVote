@@ -8,7 +8,7 @@ public class DeviceSetup {
     private static DeviceSetup instance;
     private boolean settingUp = false;
     private Device currentDevice;
-    private List<Device> DEVICES = new ArrayList<>();
+    private Devices DEVICES = new Devices();
 
     private DeviceSetup() {
     }
@@ -60,11 +60,11 @@ public class DeviceSetup {
         return currentDevice.isSetupComplete();
     }
 
-    public List<Device> getDevices() {
+    public Devices getDevices() {
         return DEVICES;
     }
 
-    public void setDevices(List<Device> devices) {
+    public void setDevices(Devices devices) {
         DEVICES = devices;
     }
 

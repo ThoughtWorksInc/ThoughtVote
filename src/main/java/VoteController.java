@@ -11,6 +11,7 @@ import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.after;
@@ -21,6 +22,12 @@ import static spark.Spark.post;
 public class VoteController {
     public static void initialize() {
         get("/", (req, res) -> renderVotes(req));
+
+        get("/votedDevices", (req, res) -> {
+            List<Integer> deviceIdsWithVote = DeviceSetup.getInstance().getDevices().deviceIdsWithVote();
+
+            return new Gson().toJson(deviceIdsWithVote);
+        });
 
         get("/refreshVotes", (req, res) -> {
             Votes votes = VoteDao.all();

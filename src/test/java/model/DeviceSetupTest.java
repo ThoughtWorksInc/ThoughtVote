@@ -124,7 +124,7 @@ class DeviceSetupTest {
         Vote voteB = VoteBuilder.buildVote("test2");
         deviceSetup.updateDevice(voteB);
         assertThat(new Gson()
-                .toJson(DeviceSetup.getInstance().getDevices()), is("[{\"voteA\":{\"topic\":\"test\",\"status\":{\"rssi\":\"5\"},\"payload\":1},\"voteB\":{\"topic\":\"test2\",\"status\":{\"rssi\":\"5\"},\"payload\":1}}]"));
+                .toJson(DeviceSetup.getInstance().getDevices()), is("[{\"voteA\":{\"topic\":\"test\",\"status\":{\"rssi\":\"5\"},\"payload\":1},\"voteB\":{\"topic\":\"test2\",\"status\":{\"rssi\":\"5\"},\"payload\":1},\"id\":0}]"));
     }
 
     @Test
