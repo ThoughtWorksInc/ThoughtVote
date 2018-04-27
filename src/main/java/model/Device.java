@@ -6,6 +6,15 @@ import java.util.Optional;
 public class Device {
     private Vote voteA;
     private Vote voteB;
+    private Integer id;
+
+    public Device() {
+        this.id = 1;
+    }
+
+    public Device(Integer id) {
+        this.id = id;
+    }
 
     public void setDetails(Vote vote) {
         if (voteA == null) {
@@ -89,5 +98,9 @@ public class Device {
                 "voteA=" + voteA +
                 ", voteB=" + voteB +
                 '}';
+    }
+
+    public boolean doesNotContainIdenticalVotes() {
+        return !voteA.equals(voteB);
     }
 }

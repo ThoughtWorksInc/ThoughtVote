@@ -125,4 +125,28 @@ class DeviceTest {
         assertTrue(device.matchingVoteB(VoteBuilder.buildVote("topicTwo", 3)));
     }
 
+    @Test
+    void shouldKnowWhenContainingMultipleIdenticalVotes() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicOne", 1);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        assertFalse(device.doesNotContainIdenticalVotes());
+    }
+
+    @Test
+    void shouldKnowWhenNotContainingMultipleIdenticalVotes() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 1);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        assertTrue(device.doesNotContainIdenticalVotes());
+    }
+
 }

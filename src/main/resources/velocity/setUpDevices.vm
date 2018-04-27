@@ -9,7 +9,7 @@
 </header>
 
 <section id="main">
-    <ul id="device-list">
+    <ol id="device-list">
         #foreach($device in $devices)
             <li>
                 <div class="view">
@@ -19,6 +19,8 @@
                     <label>Vote B topic: $device.voteB.topic | Vote B channel: $device.voteB.payload</label>
                 </div>
             </li>
+
+            <button class="destroy" ic-delete-from="/device/$device.id">X</button>
         #end
         #if($isSettingUpDevice)
             <h3>Setting up new device...</h3>
@@ -27,7 +29,7 @@
         #if($setupComplete)
             <h1>COMPLETE!</h1>
         #end
-    </ul>
+    </ol>
     <button id="endSetup">End Setup</button>
 </section>
 

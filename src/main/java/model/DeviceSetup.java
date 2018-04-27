@@ -38,12 +38,12 @@ public class DeviceSetup {
     }
 
     public void newDevice() {
-        currentDevice = new Device();
+        currentDevice = new Device(DEVICES.size());
     }
 
     private void addDevice() {
         Optional<Device> identicalDevice = DEVICES.stream().filter(device -> device.equals(currentDevice)).findFirst();
-        if (!identicalDevice.isPresent()) {
+        if (!identicalDevice.isPresent() && currentDevice.doesNotContainIdenticalVotes()) {
             DEVICES.add(currentDevice);
         }
     }
