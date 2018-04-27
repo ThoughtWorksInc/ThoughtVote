@@ -103,4 +103,8 @@ public class Device {
     public boolean doesNotContainIdenticalVotes() {
         return !voteA.equals(voteB);
     }
+
+    public Integer getId() {
+        return id;
+    }
 }

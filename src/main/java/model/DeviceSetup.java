@@ -8,7 +8,7 @@ public class DeviceSetup {
     private static DeviceSetup instance;
     private boolean settingUp = false;
     private Device currentDevice;
-    private List<Device> DEVICES = new ArrayList<Device>();
+    private List<Device> DEVICES = new ArrayList<>();
 
     private DeviceSetup() {
     }

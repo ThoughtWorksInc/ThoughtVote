@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
+import static spark.Spark.delete;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
@@ -44,6 +46,27 @@ public class SetupController {
             DeviceSetup.getInstance().setDevices(devicesList);
             return new Gson()
                     .toJson(new StandardResponse(StatusResponse.SUCCESS));
+        });
+
+        delete("/device/:id", (req, res) -> {
+            List<Device> devices = DeviceSetup.getInstance().getDevices();
+            Integer id = Integer.parseInt(req.params("id"));
+            System.out.println("attempting to delete...." + id);
+
+            Optional<Device> devicesWithoutDeletedDevice = devices
+                    .stream()
+                    .filter(device -> device.getId().equals(id))
+                    .findFirst();
+
+
+            devicesWithoutDeletedDevice.ifPresent(device -> {
+                System.out.println("Deleting device: " + device.getId() + " from id " + id);
+                devices.remove(device);
+                DeviceSetup.getInstance().setDevices(devices);
+            });
+
+
+            return "";
         });
 
     }

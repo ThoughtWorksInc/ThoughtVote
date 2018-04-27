@@ -20,8 +20,9 @@
                 </div>
             </li>
 
-            <button class="destroy" ic-delete-from="/device/$device.id">X</button>
+            <button id="$device.id" class="destroy-device">X</button>
         #end
+
         #if($isSettingUpDevice)
             <h3>Setting up new device...</h3>
         #end

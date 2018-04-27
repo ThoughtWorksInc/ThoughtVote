@@ -23,5 +23,17 @@ $(document).ready(function() {
         });
     });
 
+    var deleteDevice = $(".destroy-device");
+    deleteDevice.click(function () {
+        var id = $(this).attr('id');
+        $.ajax({
+            type: 'DELETE',
+            url: '/device/' + id,
+            success: function (data) {
+                console.log("Deleted device: " + id);
+            }
+        });
+    });
+
     var timeout = setTimeout(doAjax, interval);
 });
