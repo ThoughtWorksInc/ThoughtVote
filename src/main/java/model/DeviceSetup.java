@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class DeviceSetup {
     private static DeviceSetup instance;
@@ -41,7 +42,10 @@ public class DeviceSetup {
     }
 
     private void addDevice() {
-        DEVICES.add(currentDevice);
+        Optional<Device> identicalDevice = DEVICES.stream().filter(device -> device.equals(currentDevice)).findFirst();
+        if (!identicalDevice.isPresent()) {
+            DEVICES.add(currentDevice);
+        }
     }
 
     public void updateDevice(Vote vote) {
@@ -60,12 +64,12 @@ public class DeviceSetup {
         return DEVICES;
     }
 
-    public Integer countOfDevices() {
-        return DEVICES.size();
-    }
-
     public void setDevices(List<Device> devices) {
         DEVICES = devices;
+    }
+
+    public Integer countOfDevices() {
+        return DEVICES.size();
     }
 
     public boolean isCurrentDeviceSettingUp() {

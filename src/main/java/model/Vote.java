@@ -42,4 +42,22 @@ public class Vote {
                 ", payload=" + payload +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Vote vote = (Vote) o;
+
+        if (topic != null ? !topic.equals(vote.topic) : vote.topic != null) return false;
+        return payload != null ? payload.equals(vote.payload) : vote.payload == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = topic != null ? topic.hashCode() : 0;
+        result = 31 * result + (payload != null ? payload.hashCode() : 0);
+        return result;
+    }
 }

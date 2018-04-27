@@ -11,7 +11,8 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DeviceSetupTest {
 
@@ -89,6 +90,28 @@ class DeviceSetupTest {
 
         assertThat(deviceSetup.getDevices().get(1).getVoteA().getTopic(), is("test3"));
         assertThat(deviceSetup.getDevices().get(1).getVoteB().getTopic(), is("test4"));
+    }
+
+    @Test
+    void shouldNotAddTwoIdenticalDevices() {
+        DeviceSetup deviceSetup = DeviceSetup.getInstance();
+        deviceSetup.startSettingUp();
+
+        deviceSetup.newDevice();
+        Vote voteA = VoteBuilder.buildVote("test");
+        deviceSetup.updateDevice(voteA);
+        Vote voteB = VoteBuilder.buildVote("test2");
+        deviceSetup.updateDevice(voteB);
+
+        deviceSetup.newDevice();
+        voteA = VoteBuilder.buildVote("test");
+        deviceSetup.updateDevice(voteA);
+        voteB = VoteBuilder.buildVote("test2");
+        deviceSetup.updateDevice(voteB);
+
+        assertThat(deviceSetup.countOfDevices(), is(1));
+        assertThat(deviceSetup.getDevices().get(0).getVoteA().getTopic(), is("test"));
+        assertThat(deviceSetup.getDevices().get(0).getVoteB().getTopic(), is("test2"));
     }
 
     @Test
