@@ -1,7 +1,5 @@
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import model.Count;
-import model.Device;
 import model.DeviceSetup;
 import model.StandardResponse;
 import model.StatusResponse;
@@ -11,9 +9,7 @@ import spark.ModelAndView;
 import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.after;
@@ -25,40 +21,12 @@ public class VoteController {
     public static void initialize() {
         get("/", (req, res) -> renderVotes(req));
 
-        get("/setup", (req, res) -> {
-            System.out.println("Starting setup...");
-            DeviceSetup.getInstance().startSettingUp();
-            DeviceSetup.getInstance().newDevice();
-            return renderSetUp(req, false);
-        });
-
-        get("/setupRefresh", (req, res) -> renderSetUp(req, true));
-
-        post("/endSetup", (req, res) -> {
-            System.out.println("Ending setup...");
-            DeviceSetup.getInstance().endSettingUp();
-            return "Success";
-        });
-
         get("/refreshVotes", (req, res) -> {
             Integer count = VoteDao.count();
             return new Gson()
                     .toJson(new Count(count));
         });
 
-        get("/devices", (req, res) -> new Gson()
-                .toJson(DeviceSetup.getInstance().getDevices()));
-
-        post("/devices", (req, res) -> {
-            String body = req.body();
-            ArrayList<Device> devicesList = new Gson().fromJson(body, new TypeToken<List<Device>>() {
-            }.getType());
-            DeviceSetup.getInstance().setDevices(devicesList);
-            return new Gson()
-                    .toJson(new StandardResponse(StatusResponse.SUCCESS));
-        });
-
-//        {"status":{"rssi":5},"topic":"BYRON_SX/0xA5","payload":1,"_msgid":"8262acf4.7d9d5"}
         post("/vote", (req, res) -> {
             String body = req.body();
             Vote vote = new Gson().fromJson(body, Vote.class);
@@ -111,29 +79,11 @@ public class VoteController {
         return renderTemplate("velocity/index.vm", votesModel);
     }
 
-    private static String renderSetUp(Request req, boolean refresh) {
-        Map<String, Object> setupModel = getSetupModel();
-        if ("true".equals(req.queryParams("ic-request")) || refresh) {
-            return renderTemplate("velocity/setUpDevices.vm", setupModel);
-        }
-        return renderTemplate("velocity/index.vm", setupModel);
-    }
-
     private static Map<String, Object> getVotesModel() {
         Map<String, Object> model = new HashMap<>();
         model.put("votes", VoteDao.all());
         model.put("voteCount", VoteDao.count());
         model.put("page", "votes");
-        return model;
-    }
-
-    private static Map<String, Object> getSetupModel() {
-        Map<String, Object> model = new HashMap<>();
-        model.put("devices", DeviceSetup.getInstance().getDevices());
-        model.put("isSettingUpDevice", DeviceSetup.getInstance().isCurrentDeviceSettingUp());
-        model.put("setupComplete", !DeviceSetup.getInstance().isSettingUp());
-        model.put("deviceCount", DeviceSetup.getInstance().countOfDevices());
-        model.put("page", "setup");
         return model;
     }
 

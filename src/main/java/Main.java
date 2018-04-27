@@ -9,9 +9,10 @@ public class Main {
         staticFiles.location("/public");
 
         VoteController.initialize();
+        SetupController.initialize();
     }
 
-    static int getAssignedPort() {
+    private static int getAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
