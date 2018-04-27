@@ -9,8 +9,8 @@ public class Devices extends ArrayList<Device> {
     public List<Integer> deviceIdsWithVote() {
         Votes votes = VoteDao.all();
         return this.stream()
-                .filter(device -> votes.stream().anyMatch(vote -> device.containsVote(vote)))
-                .map(Device::getId)
+                .filter(device -> votes.stream().anyMatch(device::containsVote))
+                .map(device -> this.indexOf(device) + 1)
                 .collect(Collectors.toList());
     }
 }

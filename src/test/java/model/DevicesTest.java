@@ -7,15 +7,14 @@ import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
 
 class DevicesTest {
     @Test
     void shouldKnowOneDeviceHasBeenVotedOn() {
         Devices devices = new Devices();
 
-        Device deviceOne = new Device(1);
-        Device deviceTwo = new Device(2);
+        Device deviceOne = new Device(2);
+        Device deviceTwo = new Device(3);
 
         Vote voteOne = VoteBuilder.buildVote("topic1");
         Vote voteTwo = VoteBuilder.buildVote("topic2");
