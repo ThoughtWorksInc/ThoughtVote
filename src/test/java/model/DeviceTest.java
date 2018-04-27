@@ -58,4 +58,71 @@ class DeviceTest {
         device.setDetails(voteB);
     }
 
+    @Test
+    void shouldKnowWhenNotMatchingAnyVote() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 3);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        Vote notMatchingVote = VoteBuilder.buildVote("notMatchingTopic", 1);
+
+        assertFalse(device.matchingVoteA(notMatchingVote));
+    }
+
+    @Test
+    void shouldKnowWhenNotMatchingVoteA() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 3);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        Vote notMatchingVote = VoteBuilder.buildVote("topicTwo", 3);
+
+        assertFalse(device.matchingVoteA(notMatchingVote));
+    }
+
+    @Test
+    void shouldKnowWhenMatchingVoteA() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 3);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        assertTrue(device.matchingVoteA(VoteBuilder.buildVote("topicOne", 1)));
+    }
+
+    @Test
+    void shouldKnowWhenNotMatchingVoteB() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 3);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        Vote notMatchingVote = VoteBuilder.buildVote("topicOne", 1);
+
+        assertFalse(device.matchingVoteB(notMatchingVote));
+    }
+
+    @Test
+    void shouldKnowWhenMatchingVoteB() {
+        Vote voteA = VoteBuilder.buildVote("topicOne", 1);
+        Vote voteB = VoteBuilder.buildVote("topicTwo", 3);
+
+        Device device = new Device();
+        device.setDetails(voteA);
+        device.setDetails(voteB);
+
+        assertTrue(device.matchingVoteB(VoteBuilder.buildVote("topicTwo", 3)));
+    }
+
+
 }

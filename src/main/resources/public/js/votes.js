@@ -5,9 +5,10 @@ $(document).ready(function() {
             type: 'GET',
             url: '/refreshVotes',
             success: function (count) {
-                $('#answer-a-counter').text(count);
+                $('#answer-a-counter').text(JSON.parse(count).ofVoteA);
+                $('#answer-b-counter').text(JSON.parse(count).ofVoteB);
             },
-            complete: function (data) {
+            complete: function () {
                 setTimeout(doAjax, interval);
             }
         });

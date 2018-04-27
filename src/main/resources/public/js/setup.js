@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var interval = 500;
+    var interval = 1000;
     function doAjax() {
         $.ajax({
             type: 'GET',

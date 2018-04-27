@@ -14,7 +14,7 @@ public class VoteDao {
 //        return votes.stream().filter(t -> t.getId().equals(id)).findFirst().orElse(null);
 //    }
 //
-    public static List<Vote> all() {
+    public static Votes all() {
         return votes;
     }
 

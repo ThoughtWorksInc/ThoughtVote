@@ -5,11 +5,13 @@ import model.StandardResponse;
 import model.StatusResponse;
 import model.Vote;
 import model.VoteDao;
+import model.Votes;
 import spark.ModelAndView;
 import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.after;
@@ -22,9 +24,12 @@ public class VoteController {
         get("/", (req, res) -> renderVotes(req));
 
         get("/refreshVotes", (req, res) -> {
-            Integer count = VoteDao.count();
-            return new Gson()
-                    .toJson(new Count(count));
+            Votes votes = VoteDao.all();
+            Count count = new Count(votes, DeviceSetup.getInstance().getDevices());
+
+            String response = "{\"ofVoteA\": " + count.getVoteACount() + ", \"ofVoteB\": " + count.getVoteBCount() + "}";
+            System.out.println(response);
+            return response;
         });
 
         post("/vote", (req, res) -> {
@@ -33,7 +38,6 @@ public class VoteController {
 
             if (DeviceSetup.getInstance().isSettingUp()) {
                 System.out.println("Setting up");
-                System.out.println(vote);
                 DeviceSetup.getInstance().updateDevice(vote);
 
                 boolean currentDeviceFinished = DeviceSetup.getInstance().isCurrentDeviceFinished();
@@ -46,13 +50,11 @@ public class VoteController {
                 return new Gson()
                         .toJson(new StandardResponse(currentDeviceFinished ? StatusResponse.STILL_SETTING_UP : StatusResponse.DONE_SETTING_UP));
             } else {
-
-                res.type("application/json");
-
                 System.out.println(vote);
                 VoteDao.add(vote);
             }
 
+            res.type("application/json");
             return new Gson()
                     .toJson(new StandardResponse(StatusResponse.SUCCESS));
         });
