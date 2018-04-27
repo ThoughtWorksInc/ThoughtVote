@@ -1,7 +1,6 @@
 package model;
 
 import builders.VoteBuilder;
-import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +8,8 @@ import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CountTest {
     Votes votes = new Votes();
@@ -87,5 +87,29 @@ class CountTest {
 
         assertThat(count.getVoteACount(), is(0));
         assertThat(count.getVoteBCount(), is(2));
+    }
+
+    @Test
+    void shouldKnowWhenADeviceHasAlreadyBeenVotedOn() {
+        Vote vote = VoteBuilder.buildVote("topicTwo", 3);
+        votes.add(vote);
+
+        Vote voteTwo = VoteBuilder.buildVote("topicOne", 1);
+
+        Count count = new Count(votes, devices);
+
+        assertTrue(count.deviceAlreadyVoted(voteTwo));
+    }
+
+    @Test
+    void shouldKnowWhenADeviceHasNotYetBeenVotedOn() {
+        Vote vote = VoteBuilder.buildVote("topicTwo", 3);
+        votes.add(vote);
+
+        Vote voteTwo = VoteBuilder.buildVote("topicThree", 2);
+
+        Count count = new Count(votes, devices);
+
+        assertFalse(count.deviceAlreadyVoted(voteTwo));
     }
 }

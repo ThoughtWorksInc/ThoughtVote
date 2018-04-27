@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Count {
 
@@ -26,5 +27,17 @@ public class Count {
                         device -> device.matchingVoteB(vote))
                 ).count()
         );
+    }
+
+    public boolean deviceAlreadyVoted(Vote voteToFindMatch) {
+        List<Device> devicesContainingVote = devices.stream()
+                .filter(device -> device.containsVote(voteToFindMatch))
+                .collect(Collectors.toList());
+
+        boolean alreadyMatchingVote = votes.stream()
+                .anyMatch(anyVote -> devicesContainingVote.stream()
+                        .anyMatch(device -> device.matchingVoteA(anyVote) || device.matchingVoteB(anyVote)));
+
+        return alreadyMatchingVote;
     }
 }

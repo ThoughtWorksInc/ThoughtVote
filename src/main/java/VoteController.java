@@ -11,7 +11,6 @@ import spark.Request;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.after;
@@ -50,8 +49,9 @@ public class VoteController {
                 return new Gson()
                         .toJson(new StandardResponse(currentDeviceFinished ? StatusResponse.STILL_SETTING_UP : StatusResponse.DONE_SETTING_UP));
             } else {
-                System.out.println(vote);
-                VoteDao.add(vote);
+                if (!new Count(VoteDao.all(), DeviceSetup.getInstance().getDevices()).deviceAlreadyVoted(vote)) {
+                    VoteDao.add(vote);
+                }
             }
 
             res.type("application/json");

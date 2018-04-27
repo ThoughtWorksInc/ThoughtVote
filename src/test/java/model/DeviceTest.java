@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DeviceTest {
     @Test
@@ -123,6 +124,5 @@ class DeviceTest {
 
         assertTrue(device.matchingVoteB(VoteBuilder.buildVote("topicTwo", 3)));
     }
-
 
 }

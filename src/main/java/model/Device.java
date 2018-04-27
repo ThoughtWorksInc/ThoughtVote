@@ -37,7 +37,7 @@ public class Device {
         votes.add(voteB);
 
         Optional<Vote> minPayloadVote = votes.stream().min(Comparator.comparing(Vote::getPayload));
-        if(minPayloadVote.isPresent()) {
+        if (minPayloadVote.isPresent()) {
             return minPayloadVote.get().equals(vote);
         } else {
             throw new RuntimeException("Could not compare votes!");
@@ -50,11 +50,19 @@ public class Device {
         votes.add(voteB);
 
         Optional<Vote> maxPayloadVote = votes.stream().max(Comparator.comparing(Vote::getPayload));
-        if(maxPayloadVote.isPresent()) {
+        if (maxPayloadVote.isPresent()) {
             return maxPayloadVote.get().equals(vote);
         } else {
             throw new RuntimeException("Could not compare votes!");
         }
+    }
+
+    public boolean containsVote(Vote vote) {
+        Votes votes = new Votes();
+        votes.add(voteA);
+        votes.add(voteB);
+
+        return votes.stream().anyMatch(existingVote -> existingVote.equals(vote));
     }
 
     @Override
