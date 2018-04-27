@@ -27,7 +27,6 @@ public class VoteController {
             Count count = new Count(votes, DeviceSetup.getInstance().getDevices());
 
             String response = "{\"ofVoteA\": " + count.getVoteACount() + ", \"ofVoteB\": " + count.getVoteBCount() + "}";
-            System.out.println(response);
             return response;
         });
 
