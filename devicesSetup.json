@@ -1,0 +1,1192 @@
+[
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x19",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x7C",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 0
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xED",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xE7",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 1
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xCE",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xE1",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 2
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xA7",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x70",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 5
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x11",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x6E",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 4
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x62",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x3B",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 5
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xF6",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x5D",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 6
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x1E",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x2F",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 7
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x54",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xE9",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 8
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x54",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x1E",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 9
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xA5",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xA4",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 10
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xA4",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x48",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 11
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x31",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xD7",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 12
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x10",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x98",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 13
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x20",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x61",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 14
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x92",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x49",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 15
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x47",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xF0",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 16
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xD7",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xF8",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 17
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xBE",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x47",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 19
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x4B",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x30",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 19
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xC7",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x7A",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 22
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x15",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x6A",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 21
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x4B",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x31",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 22
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x58",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x4B",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 23
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x9B",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x41",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 24
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x04",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x03",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 25
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x0B",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x7F",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 26
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x73",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x3C",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 27
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x22",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xB5",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 28
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x41",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x64",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 29
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xE4",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x11",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 30
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xE5",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x0A",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 31
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x36",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xCD",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 32
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xD4",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x20",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 3
+    },
+    "id": 33
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x8C",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xAF",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 35
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x33",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x94",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 35
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x82",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x5F",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 36
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xEC",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x52",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 37
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x0A",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x0C",
+      "status": {
+        "rssi": "6"
+      },
+      "payload": 3
+    },
+    "id": 38
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xFB",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xF8",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 3
+    },
+    "id": 39
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xE0",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xE5",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 40
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x07",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xE8",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 3
+    },
+    "id": 41
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x20",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x71",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 42
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x80",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xCE",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 43
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x93",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x58",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 44
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x5E",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x97",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 45
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x8C",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x23",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 46
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x23",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x79",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 48
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x96",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xC8",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 49
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x35",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x02",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 52
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xAD",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xDE",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 50
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x01",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x3C",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 51
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x5F",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x97",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 9
+    },
+    "id": 52
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xD7",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x9E",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 9
+    },
+    "id": 53
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x41",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x0C",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 54
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x5B",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x52",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 55
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x5E",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x5A",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 56
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x51",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x3D",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 57
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xEE",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x90",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 9
+    },
+    "id": 58
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x57",
+      "status": {
+        "rssi": "6"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x43",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 59
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x45",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x63",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 9
+    },
+    "id": 60
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x87",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x57",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 61
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x1E",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x80",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 62
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0xBB",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x93",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 63
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x10",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x9D",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 64
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x43",
+      "status": {
+        "rssi": "3"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xC8",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 65
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x16",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0xCE",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 5
+    },
+    "id": 66
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x16",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x01",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 67
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x48",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x0E",
+      "status": {
+        "rssi": "6"
+      },
+      "payload": 5
+    },
+    "id": 68
+  },
+  {
+    "voteA": {
+      "topic": "BYRON_SX/0x5B",
+      "status": {
+        "rssi": "4"
+      },
+      "payload": 1
+    },
+    "voteB": {
+      "topic": "BYRON_SX/0x9E",
+      "status": {
+        "rssi": "5"
+      },
+      "payload": 5
+    },
+    "id": 69
+  }
+]
